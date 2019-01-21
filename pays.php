@@ -5,7 +5,7 @@ require_once "model/database.php";
 
 $id = $_GET["id"];
 $destination = getOneEntity("pays",$id);
-$sejours = getAllsejoursByPays("sejour", $id);
+$sejours = getAllSejoursByPays($id);
 
 
 ?>

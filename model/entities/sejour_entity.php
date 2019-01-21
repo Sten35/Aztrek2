@@ -8,11 +8,10 @@ function getAllSejoursByPays(int $id) : array {
     $query = "
     SELECT 
           sejour.*,
-          difficulte
-           
+          difficulte.libelle AS difficulte
     FROM sejour
-    INNER JOIN difficulte ON sejour.id = difficulte.sejour_id
-  
+    INNER JOIN difficulte ON sejour.difficulte_id = difficulte.id
+    WHERE sejour.destination_id = :id
   ";
 
 
