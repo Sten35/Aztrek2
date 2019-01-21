@@ -1,10 +1,11 @@
 <?php
 require_once "layout/header.php";
+require_once "layout/menu.php";
+
+require_once "functions.php";
+require_once "model/database.php";
 ?>
 
-<?php
-require_once "layout/menu.php";
-?>
 
 
   <main>

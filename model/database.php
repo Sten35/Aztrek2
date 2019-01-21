@@ -65,3 +65,5 @@ function deleteEntity(string $table, int $id) {
     }
     return null;
 }
+
+

@@ -1,3 +1,11 @@
+<?php
+
+require_once "model/database.php";
+$destinations = getAllEntities("pays");
+
+?>
+
+
 <nav class="main-nav">
     <div class="menu-icon">
         <img src="./images/menu-icon.png" alt="Menu">
@@ -7,11 +15,10 @@
             <li>
                 <a href="#">Pays</a>
                 <ul>
-                    <li><a href="#">Costa Rica</a></li>
-                    <li><a href="#">Honduras</a></li>
-                    <li><a href="#">Salvador</a></li>
-                    <li><a href="#">Guatemala</a></li>
-                    <li><a href="#">Mexique</a></li>
+                    <?php foreach ($destinations as $destination) : ?>
+                    <li><a href="pays.php?id=<?= $destination["id"]; ?>"> <?= $destination["titre"]; ?></a>
+                    </li>
+                    <?php endforeach; ?>
                 </ul>
             </li>
             <li>
