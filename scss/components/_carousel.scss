@@ -1,0 +1,41 @@
+.item {
+    padding: 0 15px;
+}
+
+.item-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.owl-carousel {
+    padding: 0 20px;
+    margin : 40px 0 40px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.owl-theme .owl-nav {
+    font-size: 5rem;
+}
+
+.owl-theme .owl-nav button {
+    position: absolute;
+    top: 40%;
+
+}
+
+.owl-theme .owl-nav .owl-prev {
+    left: 0;
+
+}
+
+.owl-theme .owl-nav .owl-next {
+    right: 0;
+}
+

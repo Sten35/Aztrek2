@@ -1,0 +1,31 @@
+table a{
+    color: black;
+}
+table {
+    
+    width: 70%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+tr:nth-of-type(odd) {
+    background-color: #eee
+}
+th , td {
+    border: 1px solid #ccc;
+    padding: 20px 15px;
+}
+th{
+    background-color: #ccc;
+    color: #fff;
+    text-align: left;
+}
+   
+td:nth-of-type(1),td:nth-last-of-type(2) {
+    color: red;
+    font-family: monospace, 'Monaco Normal';
+    width: 20%;
+}
+.code-html {
+    color: #00f;
+    font-family: 'monaco normal', monospace;
+}

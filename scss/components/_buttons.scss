@@ -1,0 +1,14 @@
+.btn{
+    display: inline-block;
+    padding: .875rem 2rem;
+    background-color: $yellow;
+    color: #fff;
+    border-radius: 4px;
+    transition: .3s;
+    margin : 20px 0 20px;
+
+    &:hover, &:focus{
+        background-color: $dark-yellow;
+        text-decoration: none;
+    }
+}

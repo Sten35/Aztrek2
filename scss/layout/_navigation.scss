@@ -1,0 +1,55 @@
+.menu-icon {
+
+    @media (min-width: $bp-large) {
+        display: none;
+    }
+
+}
+
+.main-nav ul {
+
+    display: none;
+
+
+    @media (min-width: $bp-large) {
+        display: flex;
+        background-color: $lightgreen;
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        a {
+
+            display: block;
+            color: #fff;
+            padding: 1rem;
+            margin: 0 1rem;
+
+            &:hover,
+            &:focus {
+                color: $yellow;
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+
+.main-menu ul li ul {
+    display: none;  
+    margin: 0;
+
+}
+
+
+.main-menu ul li:hover ul {
+    display: block;
+}
+
+.main-menu li ul {
+    position: absolute;
+}
