@@ -1,8 +1,8 @@
 <?php
 
 
-
-function getAllSejoursByPays(int $id) : array {
+function getAllSejoursByPays(int $id): array
+{
     global $connection;
 
     $query = "
@@ -16,7 +16,7 @@ function getAllSejoursByPays(int $id) : array {
 
 
     $stmt = $connection->prepare($query);
-    $stmt-> bindParam(":id", $id);
+    $stmt->bindParam(":id", $id);
     $stmt->execute();
 
     return $stmt->fetchAll();
