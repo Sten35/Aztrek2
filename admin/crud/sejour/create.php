@@ -1,7 +1,7 @@
 <?php
 require_once '../../../model/database.php';
 
-$categories = getAllEntities("categorie");
+$categories = getAllEntities("pays");
 
 require_once '../../layout/header.php';
 ?>
