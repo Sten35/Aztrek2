@@ -40,3 +40,22 @@ AND prenom = :prenom
 
 }
 
+function insertUtilisateur(string $nom, string $prenom, string $email, string $mot_de_passe) {
+    global $connection;
+
+    $query = "
+    INSERT INTO utilisateur (email, mot_de_passe, nom, prenom, admin)
+    VALUES (:email, SHA1(:mot_de_passe), :nom, :prenom, 0)
+    ";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":nom", $nom);
+    $stmt->bindParam(":prenom", $prenom);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":mot_de_passe", $mot_de_passe);
+
+
+    return $stmt->execute();
+
+}
+

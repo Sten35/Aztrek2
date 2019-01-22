@@ -57,30 +57,7 @@ getMenu();
                 <td>3090€</td>
                 <td><a href="#">S'INSCRIRE</a></td>
             </tr>
-            <tr>
-                <td>01/02/2019</td>
-                <td>15/02/2019</td>
-                <td>3090€</td>
-                <td><a href="#">S'INSCRIRE</a></td>
-            </tr>
-            <tr>
-                <td>01/02/2019</td>
-                <td>15/02/2019</td>
-                <td>3090€</td>
-                <td><a href="#">S'INSCRIRE</a></td>
-            </tr>
-            <tr>
-                <td>01/02/2019</td>
-                <td>15/02/2019</td>
-                <td>3090€</td>
-                <td><a href="#">S'INSCRIRE</a></td>
-            </tr>
-            <tr>
-                <td>01/02/2019</td>
-                <td>15/02/2019</td>
-                <td>3090€</td>
-                <td><a href="#">S'INSCRIRE</a></td>
-            </tr>
+
         </table>
 
     </section>
