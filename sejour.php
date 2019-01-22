@@ -37,7 +37,6 @@ getMenu();
 
                 </p>
 
-                <a class="btn" href="yucatan">Réserver</a>
 
             </article>
 
@@ -52,11 +51,13 @@ getMenu();
                 <th>Valider votre voyage</th>
             </tr>
             <tr>
-                <td>01/02/2019</td>
-                <td>15/02/2019</td>
-                <td>3090€</td>
+<?php foreach ($departs as $depart) : ?>
+                <td><?=$depart["date_depart"]  ; ?></td>
+                <td><?=$depart["date_retour"]  ; ?></td>
+                <td><?=$depart["prix"]  ; ?></td>
                 <td><a href="#">S'INSCRIRE</a></td>
             </tr>
+            <?php endforeach; ?>
 
         </table>
 
