@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . "/../config/parameters.php";
+require_once __DIR__ . "/../functions.php";
+
+$user = GetCurrentUser();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -38,9 +44,12 @@
                     <li>
                         <a href="">Ma sélection</a>
                     </li>
-                    <li>
-                        <a href="">Connectez-vous</a>
-                    </li>
+                    <?php if (isset($user)) : ?>
+                        <li><a href="#"><i class="fa fa-user"></i> <?= $user["email"]; ?></a></li>
+                        <li><a href="<?= SITE_ADMIN . "logout.php"; ?>"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
+                    <?php else: ?>
+                        <li><a href="<?= SITE_ADMIN; ?>"><i class="fa fa-sign-in"></i> Log in</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
 

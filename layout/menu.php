@@ -1,8 +1,10 @@
 <?php
+require_once __DIR__ . "/../model/database.php";
+require_once __DIR__ . '/../functions.php';
 
-require_once "model/database.php";
+$user = GetCurrentUser();
+
 $destinations = getAllEntities("pays");
-
 ?>
 
 
@@ -16,8 +18,9 @@ $destinations = getAllEntities("pays");
                 <a href="#">Pays</a>
                 <ul>
                     <?php foreach ($destinations as $destination) : ?>
-                    <li><a href="pays.php?id=<?= $destination["id"]; ?>"> <?= $destination["titre"]; ?></a>
-                    </li>
+                        <li>
+                            <a href="pays.php?id=<?= $destination["id"]; ?>"> <?= $destination["titre"]; ?></a>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </li>

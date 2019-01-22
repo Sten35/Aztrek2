@@ -26,9 +26,8 @@ getMenu();
                         <h3><?= $sejour["titre"]; ?></h3>
                         <ul>
                             <li><?= "durée : " . $sejour["duree"] . " jours"; ?></li>
-                            <li> <?= $sejour["prix_base"] ." €"; ?>
-                            </li>
-                            <li> <?= "niveau " . $sejour["difficulte"]; ?></li>
+                            <li><?= $sejour["prix_base"] ." €"; ?></li>
+                            <li><?= "niveau " . $sejour["difficulte"]; ?></li>
                         </ul>
                         <a class="btn" href="sejour.php?id=<?= $sejour["id"]; ?>">en savoir plus</a>
                     </article>
