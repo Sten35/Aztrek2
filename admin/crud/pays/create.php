@@ -1,11 +1,11 @@
 <?php require_once '../../layout/header.php'; ?>
 
-<h1>Ajout d'une catégorie</h1>
+<h1>Ajout d'un pays</h1>
 
 <form action="create_query.php" method="POST">
     <div class="form-group">
         <label>Libelle</label>
-        <input type="text" name="libelle" class="form-control" placeholder="Libellé" required>
+        <input type="text" name="titre" class="form-control" placeholder="pays" required>
     </div>
     <button type="submit" class="btn btn-success">
         <i class="fa fa-check"></i>

@@ -1,5 +1,24 @@
 <?php
 
+function getAllSejours(): array
+{
+    global $connection;
+
+    $query = "
+    SELECT 
+          sejour.*,
+          difficulte.libelle AS difficulte
+    FROM sejour
+    INNER JOIN difficulte ON sejour.difficulte_id = difficulte.id
+    ";
+
+
+    $stmt = $connection->prepare($query);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
 
 function getAllSejoursByPays(int $id): array
 {
@@ -47,7 +66,8 @@ function getOneSejour(int $id): array
 }
 
 
-function getAllDepartsBySejour(int $id): array {
+function getAllDepartsBySejour(int $id): array
+{
     global $connection;
 
     $query = "
@@ -63,9 +83,9 @@ function getAllDepartsBySejour(int $id): array {
   WHERE depart.sejour_id = :id
 ";
 
-  $stmt = $connection->prepare($query);
-  $stmt->bindParam(":id", $id);
-  $stmt->execute();
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
 
     return $stmt->fetchAll();
 
