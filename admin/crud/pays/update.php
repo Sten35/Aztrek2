@@ -2,7 +2,7 @@
 require_once '../../../model/database.php';
 
 $id = $_GET['id'];
-$pays = getOneEntity("pays", $id);
+$destination = getOneEntity("pays", $id);
 
 require_once '../../layout/header.php';
 ?>
@@ -11,8 +11,8 @@ require_once '../../layout/header.php';
 
 <form action="update_query.php" method="POST">
     <div class="form-group">
-        <label>Libellé</label>
-        <input type="text" name="libelle" value="<?php echo $pays"titre"]; ?>" class="form-control" placeholder="Libellé" required>
+        <label>Titre</label>
+        <input type="text" name="titre" value="<?php echo $destination["titre"]; ?>" class="form-control" placeholder="Titre" required>
     </div>
     <input type="hidden" name="id" value="<?php echo $id; ?>"> 
     <button type="submit" class="btn btn-success">

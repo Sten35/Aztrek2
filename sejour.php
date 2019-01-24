@@ -26,8 +26,8 @@ getMenu();
 
                 <ul>
                     <li> <?= "durée : " . $sejour["duree"] . " jours"; ?></li>
-                    <li><?= "A partir de" . $sejour["prix_base"] . " €"; ?></li>
-                    <li><?=$sejour["difficulte"]; ?></li>
+                    <li><?= "A partir de " . $sejour["prix_base"] . " €"; ?></li>
+                    <li><?="Niveau " . $sejour["difficulte"]; ?></li>
                 </ul>
 
                 <p>

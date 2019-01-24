@@ -6,7 +6,7 @@ $id = $_GET["id"];
 $destination = getOneEntity("pays", $id);
 $sejours = getAllSejoursByPays($id);
 
-getHeader($destination["titre"], "Pays de Atrek");
+getHeader($destination["titre"], "Pays de Astrek");
 getMenu();
 ?>
 
