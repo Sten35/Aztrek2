@@ -3,7 +3,7 @@ require_once '../../security.php';
 require_once '../../../model/database.php';
 
 $id = $_POST['id'];
-$photo = getEntity("sejour", $id);
+$photo = getOneEntity("sejour", $id);
 
 $error = deleteEntity("sejour", $id);
 
@@ -12,6 +12,6 @@ if ($error) {
     exit;
 }
 
-unlink("../../../uploads/" . $photo["image"]);
+unlink("../../../images/" . $photo["image"]);
 
 header('Location: index.php');
